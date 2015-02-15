@@ -1,4 +1,4 @@
-Peer review Assessment 1
+Reproducible Research: Peer Assessment 1
 =======================================================================================
 
 This report contains the answers to the questions raised in the first Peer review assessment set as part of the Reproducible Research course.
@@ -52,7 +52,7 @@ The following histogram represents the total number of steps taken each date
 hist(totalsteps$total,xlab="Total number of steps taken each date",main="Total number of steps", col="red")
 ```
 
-![plot of chunk histotal](figure/histotal-1.png) 
+![](./PA1_template_files/figure-html/histotal-1.png) 
 
 The following is the calculation of the mean and median of the total number of steps taken per day.
 
@@ -92,7 +92,7 @@ with(avgsteps,plot(interval,themean,main="Average number of steps at all interva
 with(avgsteps,lines(interval,themean,type="l"))
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
+![](./PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
 
 ```r
 foundinterval<-avgsteps[grep(max(avgsteps$themean),avgsteps$themean),"interval"]
@@ -136,7 +136,7 @@ The distribution of total number of steps through out the days, with the adjuste
 hist(totalfullsteps$total,xlab="Total number of steps taken each date",main="Total number of adjusted steps", col="red")
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
+![](./PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
   
 The adjusting of the values lead to increased frequency of the average total number of steps taken.
   
@@ -197,4 +197,4 @@ The difference between the average number of steps taken throughout the day on w
 xyplot(average ~ interval | theday, data = totalweeksteps, layout = c(1, 2), type="l",xlab="Interval",ylab="Number of steps")
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
+![](./PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
